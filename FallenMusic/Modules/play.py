@@ -65,7 +65,7 @@ from FallenMusic.Helpers.thumbnails import gen_qthumb, gen_thumb
     & ~filters.via_bot
 )
 async def play(_, message: Message):
-    fallen = await message.reply_text("🚦جـآري آلتـحـمـــيـل♪")
+    fallen = await message.reply_text("⚡")
     try:
         await message.delete()
     except:
@@ -178,7 +178,7 @@ async def play(_, message: Message):
     else:
         if len(message.command) < 2:
             return await fallen.edit_text("⎊ اكتب اسم الاغنية 🎧")
-        await fallen.edit_text("🚦جـآري تـشـغـيـــل♪")
+        await fallen.edit_text("⚡")
         query = message.text.split(None, 1)[1]
         try:
             results = YoutubeSearch(query, max_results=1).to_dict()
